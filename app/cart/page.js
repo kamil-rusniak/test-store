@@ -64,6 +64,8 @@ export default function CartPage() {
                     width={120}
                     height={120}
                     className={styles.itemImage}
+                    loading="lazy"
+                    sizes="(max-width: 767px) 100vw, 120px"
                   />
                 )}
                 <div className={styles.itemDetails}>

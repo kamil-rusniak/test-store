@@ -50,8 +50,12 @@ export default async function CategoryPage({ params }) {
 
         <div className={styles.products}>
           {categoryProducts.length > 0 ? (
-            categoryProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+            categoryProducts.map((product, index) => (
+              <ProductCard 
+                key={product.id} 
+                product={product} 
+                priority={index < 4}
+              />
             ))
           ) : (
             <p className={styles.noProducts}>No products found in this category.</p>

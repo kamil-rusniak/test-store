@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useCart } from "@/app/contexts/CartContext";
 import styles from "./ProductCard.module.css";
 
-export function ProductCard({ product }) {
+export function ProductCard({ product, priority = false }) {
   const { addToCart } = useCart();
   const [isAdded, setIsAdded] = useState(false);
 
@@ -29,6 +29,8 @@ export function ProductCard({ product }) {
           width={200}
           height={200}
           className={styles.productImage}
+          priority={priority}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       )}
       <div className={styles.productInfo}>
