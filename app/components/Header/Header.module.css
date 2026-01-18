@@ -1,0 +1,134 @@
+.header {
+  position: relative;
+  top: 0;
+  z-index: 1234;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobileMenuButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--dark);
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  color: var(--dark);
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: var(--grey);
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-serif, serif);
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--dark);
+  transition: background-color 0.2s;
+  border-radius: 0.375rem;
+}
+
+.iconButton:hover {
+  background-color: var(--light);
+}
+
+.cartButton {
+  position: relative;
+}
+
+.cartBadge {
+  position: absolute;
+  top: 0.1rem;
+  right: -0.1rem;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--light);
+  font-size: 0.725rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 1024px) {
+  .mobileMenuButton {
+    display: none;
+  }
+
+  .desktopNav {
+    display: flex;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+}
+

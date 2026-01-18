@@ -1,0 +1,136 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-geist-sans);
+  background-color: var(--light);
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  min-height: 80vh;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: var(--light);
+  padding: 3rem 1rem 6rem;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 32px;
+  color: var(--grey);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: var(--dark);
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 56px;
+  letter-spacing: -2.4px;
+  color: var(--dark);
+  margin: 0 0 8px 0;
+}
+
+.categoryTitle {
+  text-transform: capitalize;
+}
+
+.productCount {
+  font-size: 18px;
+  color: var(--grey);
+  margin: 0;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s;
+  background: var(--light);
+}
+
+.productCard:hover {
+  border-color: var(--dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.productImage {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: var(--light);
+  padding: 16px;
+}
+
+.productInfo {
+  padding: 20px;
+}
+
+.productTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0 0 8px 0;
+}
+
+.productPrice {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--dark);
+  margin: 0;
+}
+
+.noProducts {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--grey);
+  font-size: 18px;
+  padding: 48px;
+}
+
+.error {
+  color: red;
+  font-size: 18px;
+  margin-top: 24px;
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 5rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -1.92px;
+  }
+
+  .products {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+}
+
